@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npx serve -s dist/pokedex-angular -l ${PORT:-8080}",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --code-coverage --browsers=Chrome",
@@ -33,6 +33,7 @@
     "graphql": "^16",
     "normalize.css": "^8.0.1",
     "rxjs": "~7.5.0",
+    "serve": "^14.2.6",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
