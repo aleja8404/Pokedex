@@ -65,6 +65,9 @@ describe('PokemonSpecieService', () => {
   it('#getPokemonSpecieByPokemonId should run GetPokemonSpecie query', (done) => {
     service.getPokemonSpecieByPokemonId(1).subscribe((pokemonSpecie) => {
       expect(pokemonSpecie.id).toBe(BULBASAUR_SPECIE_MOCK.id);
+      expect(pokemonSpecie.sprite).toBe(
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png'
+      );
       done();
     });
 

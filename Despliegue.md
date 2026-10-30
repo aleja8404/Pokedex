@@ -1,6 +1,6 @@
-# 📦 Despliegue.md — PokeDex en Google Cloud App Engine
+# 📦 Despliegue.md — PokeDex en Google Cloud
 
-> Guía detallada paso a paso para desplegar la aplicación **PokeDex Angular** en **Google Cloud App Engine**.  
+> Guía detallada paso a paso para desplegar la aplicación **PokeDex Angular** en **Google Cloud**.  
 > Incluye configuración de encabezados de seguridad para obtener calificación **A+** en [SecurityHeaders.com](https://securityheaders.com).
 
 ---
@@ -191,7 +191,7 @@ Deberías ver archivos como: `index.html`, `main.[hash].js`, `styles.[hash].css`
 
 ---
 
-## 6. Desplegar en Google Cloud App Engine
+## 6. Desplegar en Google Cloud
 
 ### 6.1 Autenticar con Google Cloud
 
@@ -213,7 +213,7 @@ gcloud config set project TU_PROJECT_ID
 
 Reemplaza `TU_PROJECT_ID` con el ID de tu proyecto Google Cloud.
 
-### 6.3 Habilitar la API de App Engine
+### 6.3 Habilitar la API
 
 ```bash
 gcloud app create --region=us-central
@@ -226,7 +226,7 @@ gcloud app create --region=us-central
 Antes de desplegar, verifica que tienes:
 ```
 pokedex/
-├── app.yaml          ← Configuración de App Engine
+├── app.yaml
 ├── dist/
 │   └── pokedex-angular/
 │       ├── index.html
@@ -240,7 +240,7 @@ pokedex/
 ### 6.5 Desplegar la aplicación
 
 ```bash
-gcloud app deploy
+gcloud run deploy --source .
 ```
 
 El sistema te preguntará confirmación. Escribe `Y` y presiona Enter.
@@ -327,7 +327,7 @@ Con la configuración de headers implementada, se espera obtener una calificaci�
 
 1. Ve a [https://github.com/new](https://github.com/new)
 2. Nombre del repositorio: `pokedex`
-3. Descripción: "PokeDex Angular - Desplegado en Google Cloud App Engine"
+3. Descripción: "PokeDex Angular - Desplegado en Google Cloud"
 4. Visibilidad: **Público**
 5. Haz clic en **"Create repository"**
 

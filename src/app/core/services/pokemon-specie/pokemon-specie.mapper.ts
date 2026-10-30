@@ -37,9 +37,7 @@ const PokemonSpecieMapper: Mapper<PokemonSpecieEntity, PokemonSpecieModel> = {
       genus: pokemon_v2_pokemonspeciesnames[0].genus,
       weight: pokemon_v2_pokemons[0].weight,
       height: pokemon_v2_pokemons[0].height,
-      sprite: `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${id
-        .toString()
-        .padStart(3, '0')}.png`,
+      sprite: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`,
       flavorTexts: flavorTexts,
       types: pokemon_v2_pokemons[0].pokemon_v2_pokemontypes.map(({ pokemon_v2_type }) => ({
         name: pokemon_v2_type.name,
